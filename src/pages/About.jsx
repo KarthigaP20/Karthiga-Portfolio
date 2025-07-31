@@ -14,7 +14,7 @@ const fadeInUp = {
 const About = () => {
   const sections = [
     {
-      question: 'Tell me about yourself',
+      question: 'Tell me about yourself?',
       answer: (
         <>
           <p className="mb-4">
