@@ -23,7 +23,7 @@ const Home = () => {
       transition={{ duration: 0.8 }}
       className="min-h-screen flex flex-col items-center justify-start text-center px-6 py-10 bg-[#1f1f1f] text-white"
     >
-      <div className="bg-[#2a2a2a] p-8 sm:p-10 md:p-12 rounded-xl shadow-lg max-w-3xl w-full mt-16">
+      <div className="bg-[#2a2a2a] p-8 sm:p-10 md:p-12 rounded-xl shadow-lg max-w-3xl w-full lg:mt-16 md:mt-4 sm:mt-4">
         <motion.h1
           className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4 "
           initial={{ scale: 0.95 }}
