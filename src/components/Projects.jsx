@@ -1,4 +1,5 @@
 // src/pages/Projects.jsx
+import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 
 import apple from '../assets/projects/apple.png';
@@ -115,14 +116,19 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="px-6 py-12 min-h-screen bg-[#1f1f1f] text-white">
-      <h2 className="text-3xl font-bold text-center text-yellow-400 mb-10">✨ Projects Showcase</h2>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="px-6 py-12 min-h-screen bg-[#1f1f1f] text-white"
+    >
+      <h2 className="text-3xl font-bold text-center text-yellow-400 mb-10">Projects Showcase</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

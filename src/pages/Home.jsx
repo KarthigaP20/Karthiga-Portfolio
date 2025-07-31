@@ -1,19 +1,31 @@
 // src/pages/Home.jsx
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import About from './About';
+import Skills from './Skills';
+import Projects from '../components/Projects';
+import Resume from './Resume';
+import Contact from './Contact';
 
 const Home = () => {
+  const [activeSection, setActiveSection] = useState('');
+
+  const handleSectionClick = (section) => {
+    setActiveSection(section === activeSection ? '' : section);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="min-h-[90vh] flex items-center justify-center text-center px-6 bg-[#1f1f1f] text-white"
+      className="min-h-screen flex flex-col items-center justify-start text-center px-6 py-10 bg-[#1f1f1f] text-white"
     >
-      <div className="bg-[#2a2a2a] p-8 sm:p-12 rounded-xl shadow-lg max-w-3xl w-full">
+      <div className="bg-[#2a2a2a] p-8 sm:p-10 md:p-12 rounded-xl shadow-lg max-w-3xl w-full mt-16">
         <motion.h1
-          className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4"
+          className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4 "
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -51,18 +63,17 @@ const Home = () => {
         />
 
         <p className="text-base sm:text-lg max-w-xl mx-auto mb-6 text-gray-400">
-          I build interactive and scalable web apps using the latest tech stack like React, Tailwind CSS, MongoDB, and Node.js. Passionate about clean UI, great UX, and impactful code.
+          I'm a passionate Full Stack Developer focused on building responsive and clean web applications. As a fresher, I've built several hands-on projects using technologies like React, Tailwind CSS, MongoDB, and Node.js.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/Karthiga_ResuMe.pdf"
-            download="Karthiga_Resume.pdf"
+        {/* ✅ Desktop only: About + Contact buttons */}
+        <div className="hidden lg:flex flex-wrap gap-4 justify-center">
+          <Link
+            to="/about"
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded transition"
           >
-            Download Resume
-          </a>
-
+            About Me
+          </Link>
           <Link
             to="/contact"
             className="border border-yellow-500 text-yellow-400 hover:bg-[#2a2a2a] px-6 py-2 rounded transition"
@@ -70,6 +81,28 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
+
+        {/* ✅ Mobile + Tablet: Section toggle buttons */}
+        <div className="lg:hidden flex flex-col gap-3 mt-6">
+          {['about', 'skills', 'projects', 'resume', 'contact'].map((section) => (
+            <button
+              key={section}
+              onClick={() => handleSectionClick(section)}
+              className="bg-yellow-500 text-black font-medium px-4 py-2 rounded hover:bg-yellow-600 transition"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ Render selected section on mobile + tablet */}
+      <div className="w-full mt-6 lg:hidden">
+        {activeSection === 'about' && <About />}
+        {activeSection === 'skills' && <Skills />}
+        {activeSection === 'projects' && <Projects />}
+        {activeSection === 'resume' && <Resume />}
+        {activeSection === 'contact' && <Contact />}
       </div>
     </motion.section>
   );

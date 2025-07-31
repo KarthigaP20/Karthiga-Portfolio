@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, tech, image, demo, code }) => {
             href={demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300 hover:underline"
+            className="text-white-400 hover:text-white-300 hover:underline"
           >
             Live Demo
           </a>
@@ -31,7 +31,7 @@ const ProjectCard = ({ title, description, tech, image, demo, code }) => {
             href={code}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-400 hover:text-green-300 hover:underline"
+            className="text-white-400 hover:text-white-300 hover:underline"
           >
             Source Code
           </a>
