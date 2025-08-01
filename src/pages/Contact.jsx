@@ -1,4 +1,3 @@
-// src/pages/Contact.jsx
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 

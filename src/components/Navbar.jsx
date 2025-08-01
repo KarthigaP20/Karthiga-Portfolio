@@ -1,7 +1,6 @@
-// src/components/Navbar.jsx
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiCode } from 'react-icons/fi';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,8 +24,13 @@ const Navbar = () => {
   return (
     <nav className="bg-[#1f1f1f] shadow-md sticky top-0 z-50 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        <h1 className="text-xl font-bold text-yellow-400">Karthiga</h1>
+        {/* Logo with Icon */}
+        <div className="flex items-center gap-2 text-yellow-400">
+          <FiCode className="text-2xl" />
+          <h1 className="text-xl font-bold">Karthiga</h1>
+        </div>
 
+        {/* Desktop Nav */}
         <ul className="hidden lg:flex gap-6 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/about" className={navLinkClass}>About</NavLink>
@@ -36,6 +40,7 @@ const Navbar = () => {
           <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
         </ul>
 
+        {/* Mobile Menu Button */}
         <div className="flex items-center gap-4 lg:gap-6">
           <button
             onClick={toggleMenu}
@@ -46,6 +51,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Overlay */}
         {menuOpen && (
           <div
             onClick={closeMenu}
@@ -53,6 +59,7 @@ const Navbar = () => {
           ></div>
         )}
 
+        {/* Side Menu */}
         <div
           className={`fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] z-50 transform transition-transform duration-300 ease-in-out ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'

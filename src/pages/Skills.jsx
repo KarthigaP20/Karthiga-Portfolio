@@ -1,4 +1,3 @@
-// src/pages/Skills.jsx
 import { motion } from 'framer-motion';
 
 const skills = [
@@ -28,28 +27,49 @@ const skills = [
     level: 'Expert',
   },
   {
-    name: 'Redux',
-    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
-    level: 'Expert',
-  },
-  {
     name: 'Vite',
     logo: 'https://vitejs.dev/logo.svg',
     level: 'Expert',
   },
+  
   {
+    name: 'MongoDB',
+    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+    level: 'Intermediate',
+  },
+   {
     name: 'Node.js',
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
     level: 'Intermediate',
   },
-  {
+   {
     name: 'Express.js',
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
     level: 'Intermediate',
   },
+    {
+    name: 'Git',
+    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
+    level: 'Expert',
+  },
   {
-    name: 'MongoDB',
-    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
+    name: 'GitHub',
+    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
+    level: 'Expert',
+  },
+   {
+    name: 'REST API',
+    logo: 'https://www.vectorlogo.zone/logos/json/json-icon.svg',
+    level: 'Intermediate',
+  },
+    {
+    name: 'Postman',
+    logo: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
+    level: 'Intermediate',
+  },
+  {
+    name: 'Redux',
+    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
     level: 'Intermediate',
   },
     {
@@ -63,26 +83,6 @@ const skills = [
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
     level: 'Basic',
   },
-  {
-    name: 'Git',
-    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
-    level: 'Intermediate',
-  },
-  {
-    name: 'GitHub',
-    logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
-    level: 'Intermediate',
-  },
-  {
-    name: 'REST API',
-    logo: 'https://www.vectorlogo.zone/logos/json/json-icon.svg',
-    level: 'Intermediate',
-  },
-    {
-    name: 'Postman',
-    logo: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
-    level: 'Intermediate',
-  },
 ];
 
 const Skills = () => (
@@ -94,7 +94,8 @@ const Skills = () => (
   >
     <h2 className="text-3xl font-bold text-yellow-400 mb-10 text-center">My Skills</h2>
 
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<div className="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
       {skills.map((skill, index) => (
         <motion.div
           key={index}

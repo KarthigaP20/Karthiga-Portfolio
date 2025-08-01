@@ -1,4 +1,5 @@
-// src/components/ProjectCard.jsx
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
+
 const ProjectCard = ({ title, description, tech, image, demo, code }) => {
   return (
     <div className="bg-[#2a2a2a] text-white shadow-xl rounded-lg overflow-hidden transform hover:scale-[1.03] transition duration-300">
@@ -6,7 +7,7 @@ const ProjectCard = ({ title, description, tech, image, demo, code }) => {
       <div className="p-4">
         <h3 className="text-lg font-bold text-yellow-400 mb-2">{title}</h3>
         <p className="text-sm text-gray-300 mb-3">{description}</p>
-        
+
         <div className="flex flex-wrap gap-2 text-xs mb-4">
           {tech.map((item, i) => (
             <span
@@ -23,17 +24,17 @@ const ProjectCard = ({ title, description, tech, image, demo, code }) => {
             href={demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white-400 hover:text-white-300 hover:underline"
+            className="text-white-400 hover:text-white-300 hover:underline flex items-center gap-1"
           >
-            Live Demo
+            <FiExternalLink /> Live Demo
           </a>
           <a
             href={code}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white-400 hover:text-white-300 hover:underline"
+            className="text-white-400 hover:text-white-300 hover:underline flex items-center gap-1"
           >
-            Source Code
+            <FiGithub /> Source Code
           </a>
         </div>
       </div>

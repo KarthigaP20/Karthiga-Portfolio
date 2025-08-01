@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
@@ -22,7 +21,10 @@ const Footer = () => {
           <FaLinkedin />
         </a>
       </div>
-      <p className="text-gray-400">© 2025 Karthiga • Built with React & Tailwind CSS</p>
+    <p className="text-sm text-gray-400">
+  © 2025 Karthiga — Built with <span className="text-white">React</span>, <span className="text-white">Tailwind CSS</span> & <span className="text-white">JavaScript</span>
+</p>
+
     </footer>
   );
 };

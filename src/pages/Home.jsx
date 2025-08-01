@@ -1,8 +1,6 @@
-// src/pages/Home.jsx
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom';
 import About from './About';
 import Skills from './Skills';
 import Projects from '../components/Projects';
@@ -10,12 +8,6 @@ import Resume from './Resume';
 import Contact from './Contact';
 
 const Home = () => {
-  const [activeSection, setActiveSection] = useState('');
-
-  const handleSectionClick = (section) => {
-    setActiveSection(section === activeSection ? '' : section);
-  };
-
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}
@@ -25,7 +17,7 @@ const Home = () => {
     >
       <div className="bg-[#2a2a2a] p-8 sm:p-10 md:p-12 rounded-xl shadow-lg max-w-3xl w-full lg:mt-16 md:mt-4 sm:mt-4">
         <motion.h1
-          className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4 "
+          className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4"
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -81,28 +73,15 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
-
-        {/* ✅ Mobile + Tablet: Section toggle buttons */}
-        <div className="lg:hidden flex flex-col gap-3 mt-6">
-          {['about', 'skills', 'projects', 'resume', 'contact'].map((section) => (
-            <button
-              key={section}
-              onClick={() => handleSectionClick(section)}
-              className="bg-yellow-500 text-black font-medium px-4 py-2 rounded hover:bg-yellow-600 transition"
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
-          ))}
-        </div>
       </div>
 
-      {/* ✅ Render selected section on mobile + tablet */}
-      <div className="w-full mt-6 lg:hidden">
-        {activeSection === 'about' && <About />}
-        {activeSection === 'skills' && <Skills />}
-        {activeSection === 'projects' && <Projects />}
-        {activeSection === 'resume' && <Resume />}
-        {activeSection === 'contact' && <Contact />}
+      {/* ✅ Show all sections in mobile/tablet */}
+      <div className="w-full mt-2 space-y-2 lg:hidden">
+        <About />
+        <Skills />
+        <Projects />
+        <Resume />
+        <Contact />
       </div>
     </motion.section>
   );

@@ -1,4 +1,4 @@
-// src/pages/Projects.jsx
+
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 
@@ -17,20 +17,20 @@ import udemyclone from '../assets/projects/udemyclone.png';
 
 const projects = [
   {
-    title: 'Movie App – TMDB Browser',
-    description: 'Search, explore and save movies using TMDB API.',
-    tech: ['React', 'Tailwind CSS', 'API'],
-    image: movie,
-    demo: 'https://movie-app-sigma-ten-14.vercel.app/',
-    code: 'https://github.com/KarthigaP20/Movie-App',
-  },
-  {
     title: 'Netflix Clone',
     description: 'Full-stack clone with login/signup UI.',
     tech: ['React', 'Express', 'Tailwind'],
     image: netflix,
     demo: 'https://netflixclone-orcin-nine.vercel.app',
     code: 'https://github.com/KarthigaP20/Netflix-Clone',
+  },
+  {
+    title: 'Movie App – TMDB Browser',
+    description: 'Search, explore and save movies using TMDB API.',
+    tech: ['React', 'Tailwind CSS', 'API'],
+    image: movie,
+    demo: 'https://movie-app-sigma-ten-14.vercel.app/',
+    code: 'https://github.com/KarthigaP20/Movie-App',
   },
   {
     title: 'Weather App',
@@ -40,14 +40,7 @@ const projects = [
     demo: 'https://weather-app-gamma-jade-76.vercel.app/',
     code: 'https://github.com/KarthigaP20/Weather-App',
   },
-  {
-    title: 'TripAdvisor Clone',
-    description: 'Static homepage UI replica using HTML & CSS.',
-    tech: ['HTML', 'CSS'],
-    image: tripadvisor,
-    demo: 'https://karthigap20.github.io/TripAdvisor-clone/',
-    code: 'https://github.com/KarthigaP20/TripAdvisor-clone',
-  },
+
   {
     title: 'Task Manager',
     description: 'Simple task manager with CRUD and local storage.',
@@ -95,6 +88,14 @@ const projects = [
     image: nostra,
     demo: 'https://karthigap20.github.io/Nostra-Js/',
     code: 'https://github.com/KarthigaP20/Nostra-Js',
+  },
+  {
+    title: 'TripAdvisor Clone',
+    description: 'Static homepage UI replica using HTML & CSS.',
+    tech: ['HTML', 'CSS'],
+    image: tripadvisor,
+    demo: 'https://karthigap20.github.io/TripAdvisor-clone/',
+    code: 'https://github.com/KarthigaP20/TripAdvisor-clone',
   },
   {
     title: 'Udemy Clone',

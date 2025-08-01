@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import ProfileImg from '../assets/profile.jpg'; // Update if file name differs
+import { ArrowRight } from 'lucide-react';
+import ProfileImg from '../assets/profile.jpg';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,9 +18,10 @@ const About = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="p-10 min-h-screen bg-[#1f1f1f] text-white"
+      className="p-10 min-h-screen bg-[#1f1f1f] text-white flex justify-center items-center"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl w-full text-center">
+
         <h2 className="text-3xl font-bold text-yellow-400 mb-6">About Me</h2>
 
         <img
@@ -39,22 +41,20 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8"
+          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8 text-center"
         >
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Technical Skills</h3>
-          <p className="text-sm leading-relaxed text-gray-300">
+          <p className="text-sm leading-relaxed text-gray-300 mb-4">
             I’ve worked with modern frontend and backend tools like React, Tailwind CSS, Node.js, MongoDB, and Express.js.
             My focus is on building clean, scalable, and responsive web apps.
-            <br />
-            For a visual overview{' '}
-            <Link
-              to="/skills"
-              className="text-yellow-400 underline hover:text-yellow-300 transition"
-            >
-              <br /><br />
-              Explore My Skills section
-            </Link>
           </p>
+          <p className="text-xs text-yellow-400 inline-block mr-1">Wanna know what I'm good at?</p>
+          <Link
+            to="/skills"
+            className="text-xs text-yellow-400 hover:underline transition duration-300 inline-flex items-center"
+          >
+            Explore My Skills <ArrowRight className="ml-2" size={16} />
+          </Link>
         </motion.div>
 
         {/* Education */}
@@ -64,13 +64,14 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8"
+          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8 text-center"
         >
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Education</h3>
           <p className="text-sm leading-relaxed text-gray-300">
             <strong>B.E. in Computer Science Engineering</strong> <br />
             Dhanalakshmi Srinivasan College of Engineering and Technology <br />
-            Anna University (2022–2025) | CGPA: <strong>8.14</strong>
+            Anna University (2021–2025)
+            <br />CGPA: <strong>8.14</strong>
           </p>
         </motion.div>
 
@@ -81,35 +82,40 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8"
+          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 mb-8 text-center"
         >
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Projects</h3>
           <p className="text-sm leading-relaxed text-gray-300 mb-4">
-            I’ve built real-time applications focused on clean UI, mobile responsiveness, and performance optimization.
-            From portfolio websites to full-stack web apps, each project reflects my growth and passion.
+        I’ve been exploring and building full-stack projects focused on clean UI, mobile responsiveness, and performance optimization.  
+  From portfolios to functional web apps, every project reflects my learning journey and growing passion for development.
           </p>
+          <p className="text-xs text-yellow-400 inline-block mr-1">Curious to see what I’ve built?</p>
           <Link
             to="/projects"
-            className="inline-block text-yellow-400 underline hover:text-yellow-300 text-sm transition"
+            className="text-xs text-yellow-400 hover:underline transition duration-300 inline-flex items-center"
           >
-            Explore My Projects
+            Explore My Projects <ArrowRight className="ml-2" size={16} />
           </Link>
         </motion.div>
 
-        {/* Looking for */}
+        {/* Looking For */}
         <motion.div
           custom={3}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="bg-[#2a2a2a] rounded-xl shadow-md p-6"
+          className="bg-[#2a2a2a] rounded-xl shadow-md p-6 text-center"
         >
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Looking For</h3>
           <p className="text-sm leading-relaxed text-gray-300">
-            I’m actively seeking Full Stack or Frontend Developer roles where I can grow, contribute to real-world products, and collaborate with tech-forward teams.
+<p className="text-gray-300 leading-relaxed max-w-xl mx-auto text-center">
+  I’m actively seeking opportunities as a Full Stack Web Developer, where I can grow, contribute to impactful products, and collaborate with tech-forward teams.
+</p>
+
           </p>
         </motion.div>
+
       </div>
     </motion.section>
   );

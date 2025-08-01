@@ -1,4 +1,3 @@
-// src/pages/Resume.jsx
 import { FaFileDownload } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
