@@ -62,16 +62,16 @@ const Home = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             to="/about"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded transition"
+            className="border border-yellow-500 text-yellow-400 hover:bg-yellow-600 hover:text-black px-6 py-2 rounded transition"
           >
             About Me
           </Link>
-          <Link
+          {/* <Link
             to="/contact"
             className="border border-yellow-500 text-yellow-400 hover:bg-[#bd9494] px-6 py-2 rounded transition"
           >
             Contact Me
-          </Link>
+          </Link> */}
           <a
     href="/Karthiga_ResuMe.pdf"
     target="_blank"

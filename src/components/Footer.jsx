@@ -23,7 +23,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="mailto:karthigaparthiban@gmail.com"
+          href="mailto:karthigaparthiban17@gmail.com"
           className="hover:text-yellow-400 transition"
         >
           <FaEnvelope />
