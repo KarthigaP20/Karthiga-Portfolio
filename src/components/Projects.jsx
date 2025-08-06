@@ -14,14 +14,24 @@ import registerform from '../assets/projects/registerform.jpg';
 import nostra from '../assets/projects/nostra.png';
 import simpleportfolio from '../assets/projects/simpleportfolio.png';
 import udemyclone from '../assets/projects/udemyclone.png';
+import bulkmail from '../assets/projects/bulkmail.png';
 
 const projects = [
+  {
+  title: 'BulkMail Sender',
+  description: 'Full-stack app to send emails in bulk via uploaded Excel files.',
+  tech: ['React', 'Node.js', 'Tailwind'],
+  image: bulkmail, 
+  demo: 'https://bulk-mail-sender-five.vercel.app/',
+  code: 'https://github.com/KarthigaP20/BulkMail-Sender',
+},
+
   {
     title: 'Netflix Clone',
     description: 'Full-stack clone with login/signup UI.',
     tech: ['React', 'Express', 'Tailwind'],
     image: netflix,
-    demo: 'https://netflixclone-orcin-nine.vercel.app',
+    demo: 'https://flixview-netflix-login-page-orcin-nine.vercel.app/',
     code: 'https://github.com/KarthigaP20/Netflix-Clone',
   },
   {
