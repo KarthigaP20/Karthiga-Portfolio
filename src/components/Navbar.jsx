@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiCode } from 'react-icons/fi';
+import { FiMenu, FiX, FiCode, FiMail } from 'react-icons/fi';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,13 +25,13 @@ const Navbar = () => {
   return (
     <nav className="bg-[#1f1f1f] shadow-md sticky top-0 z-50 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        {/* Logo with Icon */}
+        {/* Logo */}
         <div className="flex items-center gap-2 text-yellow-400">
           <FiCode className="text-2xl" />
           <h1 className="text-xl font-bold">Karthiga</h1>
         </div>
 
-        {/* Desktop Nav */}
+        {/* Nav Links */}
         <ul className="hidden lg:flex gap-6 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/about" className={navLinkClass}>About</NavLink>
@@ -40,11 +41,37 @@ const Navbar = () => {
           <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
         </ul>
 
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-4 lg:gap-6">
+        {/* Social Icons Always Visible */}
+        <div className="flex items-center gap-4 text-xl">
+          <a
+            href="mailto:karthigaparthiban17@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-white transition"
+          >
+            <FiMail />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/karthiga21/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-white transition"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/KarthigaP20"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-white transition"
+          >
+            <FaGithub />
+          </a>
+
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="text-2xl text-yellow-400 lg:hidden"
+            className="text-2xl text-yellow-400 lg:hidden ml-2"
             aria-label="Toggle Menu"
           >
             {menuOpen ? <FiX /> : <FiMenu />}
@@ -59,7 +86,7 @@ const Navbar = () => {
           ></div>
         )}
 
-        {/* Side Menu */}
+        {/* Side Menu for Mobile */}
         <div
           className={`fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] z-50 transform transition-transform duration-300 ease-in-out ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'

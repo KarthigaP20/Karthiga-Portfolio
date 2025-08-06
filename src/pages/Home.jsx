@@ -73,7 +73,7 @@ const Home = () => {
             Contact Me
           </Link> */}
           <a
-    href="/Karthiga_ResuMe.pdf"
+    href="/KarthigaP_ResuME.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-2 rounded transition shadow"
