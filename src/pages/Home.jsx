@@ -56,7 +56,7 @@ const Home = () => {
         />
 
         <p className="text-base sm:text-lg max-w-xl mx-auto mb-6 text-gray-400">
-          I'm a passionate Full Stack Developer focused on building responsive and clean web applications. As a fresher, I've built several hands-on projects using technologies like React, Tailwind CSS, MongoDB, and Node.js.
+          I'm a passionate Full Stack Developer focused on building responsive and clean web applications. As a fresher, I've built several hands-on projects using technologies like React, Tailwind CSS, MongoDB, Node.js, Express.js.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">

@@ -35,17 +35,17 @@ const skills = [
   {
     name: 'MongoDB',
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
-    level: 'Intermediate',
+    level: 'Expert',
   },
    {
     name: 'Node.js',
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
-    level: 'Intermediate',
+    level: 'Expert',
   },
    {
     name: 'Express.js',
     logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
-    level: 'Intermediate',
+    level: 'Expert',
   },
     {
     name: 'Git',
@@ -60,12 +60,12 @@ const skills = [
    {
     name: 'REST API',
     logo: 'https://www.vectorlogo.zone/logos/json/json-icon.svg',
-    level: 'Intermediate',
+    level: 'Expert',
   },
     {
     name: 'Postman',
     logo: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
-    level: 'Intermediate',
+    level: 'Expert',
   },
   {
     name: 'Redux',
