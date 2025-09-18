@@ -15,8 +15,16 @@ import nostra from '../assets/projects/nostra.png';
 import simpleportfolio from '../assets/projects/simpleportfolio.png';
 import udemyclone from '../assets/projects/udemyclone.png';
 import bulkmail from '../assets/projects/bulkmail.png';
-
+import seasidewaffle from '../assets/projects/SeaSideWaffle.png';
 const projects = [
+  {
+  "title": "Sea Side Waffle",
+  "description": "Full-stack e-commerce web application to browse and order waffles online, with secure admin dashboard to manage products, users, and orders.",
+  "tech": ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Firebase Authentication", "JWT", "Cloudinary", "Nodemailer"],
+  "image": seasidewaffle, 
+  "demo": "https://seasidewaffle.vercel.app",
+  "code": "https://github.com/KarthigaP20/seasidewaffle"
+},
   {
   title: 'BulkMail Sender',
   description: 'Full-stack app to send emails in bulk via uploaded Excel files.',

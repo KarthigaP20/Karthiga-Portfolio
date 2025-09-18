@@ -16,7 +16,7 @@ const Resume = () => {
         </p>
 
         <a
-          href="/KarthigaP_ResuME.pdf"
+          href="/KarthigaP_RESUME.pdf"
           download
           className="inline-flex items-center gap-3 bg-yellow-500 text-black font-semibold px-6 py-3 rounded hover:bg-yellow-600 transition shadow-md"
         >
